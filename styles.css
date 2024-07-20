@@ -1,0 +1,191 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+#theme-toggle {
+    padding: 10px 20px;
+    font-size: 24px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+#theme-toggle:hover {
+    color: #007bff;
+}
+
+.todo-container {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+}
+
+#task-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 20px;
+}
+
+#add-task {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background: #28a745;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#add-task:hover {
+    background: #218838;
+}
+
+#task-list {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    max-width: 500px;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    font-size: 20px;
+}
+
+.task-item span {
+    color: #333;
+}
+
+.task-item button {
+    background: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.task-item button:hover {
+    background: #c82333;
+}
+
+/* Modo escuro */
+.dark-mode {
+    background-color: #222;
+    color: #e0e0e0;
+}
+
+.dark-mode .container {
+    background: #333;
+    color: #e0e0e0;
+}
+
+.dark-mode h1 {
+    color: #e0e0e0;
+}
+
+.dark-mode #task-input {
+    background: #444;
+    color: #e0e0e0;
+    border: 1px solid #555;
+}
+
+.dark-mode #add-task {
+    background: #17a2b8;
+}
+
+.dark-mode #add-task:hover {
+    background: #138496;
+}
+
+.dark-mode #task-list {
+    border: 1px solid #555;
+}
+
+.dark-mode .task-item {
+    background-color: #444;
+    border: 1px solid #555;
+}
+
+.dark-mode .task-item span {
+    color: #e0e0e0;
+}
+
+.dark-mode .task-item button {
+    background: #dc3545;
+}
+
+.dark-mode .task-item button:hover {
+    background: #c82333;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+        width: 90%;
+    }
+
+    .todo-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #task-input {
+        width: calc(100% - 20px); /* Ajusta a largura do input para se ajustar na tela pequena */
+    }
+
+    #add-task {
+        width: 100%;
+    }
+
+    #theme-toggle {
+        font-size: 20px; /* Reduz o tamanho da fonte para telas menores */
+    }
+}
